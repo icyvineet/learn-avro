@@ -1,0 +1,33 @@
+{
+	"namespace": "com.vineet.serde",
+	"type": "record",
+	"name": "HBaseRowData",
+	"fields": [
+		{
+			"name": "rowKey",
+			"type": "string"
+		},
+		{
+			"name": "columnFamily",
+			"type": "string"
+		},
+		{
+			"name": "columns",
+			"type": {
+				"namespace": "com.vineet.serde",
+				"type": "array",
+				"name": "column",
+				"fields": [
+					{
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"name": "value",
+						"type": "string"
+					}
+				]
+			}
+		}
+	]
+}
